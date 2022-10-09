@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+nav{
+  background: rebeccapurple;
+  color: #fff;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+}
+
+.logo{
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+/* ============== GAME CONTAINER ============== */
+.gameContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  margin-right: 4rem;
+  position: relative;
+}
+
+.line{
+  width: 0;
+  height: 4px;
+  background-color: rebeccapurple;
+  position: absolute;
+  transition: width 1s ease-in-out;
+}
+
+.box{
+  border: 2px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  cursor: pointer;
+}
+
+.box:hover{
+  background-color: #e8d8f8;
+}
+
+.imgBox img{
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* ================= UTILITY CLASSES ================== */
+.bt-0{
+  border-top: 0;
+}
+
+.bb-0{
+  border-bottom: 0;
+}
+
+.bl-0{
+  border-left: 0;
+}
+
+.br-0{
+  border-right: 0;
+}
+
+
+h1{
+  font-size: 2.5rem;
+}
+
+.info{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.btn{
+  margin-left: 1rem;
+  padding: 5px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  background: #d1a7fb;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* ===================== MEDIA QUERY FOR PHONE AND BELOW 750PX DEVICE ======================= */
+@media screen and (max-width: 750px){
+  .gameContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container{  
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+  }
+
+  .gameInfo{
+    margin-top: 50px;
+  }
+    
+}
+
+@media screen and (max-width: 450px){
+  h1{
+    font-size: 1.9rem;
+  }
+  
+  .container{  
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  
+  .box{
+  font-size: 10vw;
+  }
+}
